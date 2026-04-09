@@ -58,14 +58,14 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `[Student 1]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `[Student 2]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Ashitha Ashok` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Varada Supanekar` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
 
 ## 1.3 Project Title
 `[Enter the title of your project]`
 
 ## 1.4 One-Line Pitch
-`[Describe your project in one sentence]`
+`A fast-paced pixel-art Batman game where the player flies through Gotham while dodging and shooting obstacles in real time.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -554,11 +554,11 @@ Include:
 
 ### Week 1 — Plan and De-risk
 Expected outcomes:
-- [ ] Idea finalized
-- [ ] Core interaction decided
+- [O] Idea finalized
+- [0] Core interaction decided
 - [ ] Sketches made
 - [ ] BOM completed
-- [ ] Purchase needs identified
+- [0] Purchase needs identified
 - [ ] Key uncertainty identified
 - [ ] Basic feasibility tested
 
@@ -632,9 +632,9 @@ What is the single biggest uncertainty in your project at this stage?
 | Question | How You Will Check |
 |---|---|
 | Do players understand what to do? | `[Method]` |
-| Is the interaction satisfying? | `[Method]` |
-| Do players want another turn? | `[Method]` |
-| Is the challenge balanced? | `[Method]` |
+| Is the interaction satisfying? | `YES` |
+| Do players want another turn? | `YES` |
+| Is the challenge balanced? | `YES` |
 | Is the response clear and immediate? | `[Method]` |
 
 ## 16.3 Testing and Debugging Log
