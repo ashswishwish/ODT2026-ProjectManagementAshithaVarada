@@ -65,7 +65,7 @@ By the final review, this README should clearly show:
 `[Batman Dodge]`
 
 ## 1.4 One-Line Pitch
-`A fast-paced pixel-art interactive game where Batman navigates a chaotic city while players control survival through real-time physical inputs.`
+`A fast-paced pixel-art Batman game controlled by a hand-built ESP32 dual-joystick console that transmits inputs wirelessly over BLE and lights up a NeoPixel in real time to mirror every in-game action.`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
@@ -75,9 +75,8 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`[The project is a 2D pixel-art interactive game system** where Batman moves continuously across a city landscape, and the player must help him dodge obstacles such as buildings, enemies, and projectiles. The system combines screen-based gameplay with physical interaction** using sensors/buttons connected to an ESP32.
-
-The experience is designed to be **fast, reactive, and replayable**, emphasizing reflexes and timing. The pixel aesthetic creates nostalgia, while the physical interaction introduces embodiment, making it more engaging than a purely digital game.]`
+`The project is a 2D pixel-art game (BATMANNER) where Batman navigates a city landscape, dodging obstacles and enemies. All player input comes from a custom physical console built around an ESP32 microcontroller with two HW-504 analogue joysticks. The console pairs to the game host over Bluetooth Low Energy, appearing as a standard HID keyboard so no special drivers are needed.
+The experience combines embodied physical control with reactive lighting feedback. A single WS2812B NeoPixel breathes continuously and changes colour in real time based on which action is being performed — yellow for movement, orange for strafing, cyan for dash, green for fire, red for pause — creating an immediate sensory link between what the player does physically and what happens on screen. This makes the console feel alive, not just functional.`
 
 ---
 
@@ -103,9 +102,9 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`[- Experience: Fast reflex-based dodging game
-- Feeling: Tension, urgency, satisfaction after survival
-- Replay value: Increasing difficulty and score-based motivation]`
+`[- Experience: A reflex-based arcade dodging game played through a hand-held physical console with live colour feedback on every action.
+- Feeling: rgency and presence — the glowing controller makes it feel like the hardware itself is reacting, not just the screen.
+- Replay value: Increasing difficulty, score competition, and the tactile satisfaction of the joystick + light response loop make each run feel immediate and replayable]`
 
 ## 2.3 Design Persona
 Complete the sentence below:
@@ -113,7 +112,7 @@ Complete the sentence below:
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
 
 **Response:**  
-`[We are designing this project as a game for teens and exhibition visitors.]`
+`[We are designing this project as if we are a small creative studio making a game / interactive experience for teens and exhibition visitors.]`
 
 ---
 
@@ -127,12 +126,13 @@ List what inspired the project.
 | `[Video Game]` | `[Flappy Bird]` | `[Simple but addictive loop]` |
 | `[Video Game]` | `[Jetpack Joyride]` | `[Continuous motion gameplay]` |
 | `[Visual Style]` | `[Pixel Art Games]` | `[Minimal but expressive visuals]` |
+| `[Hardware Project]` | `[DIY Arduino gamepads]` | `[Joystick-to-BLE keyboard mapping concept]` |
 
 ## 3.2 Original Twist
 What makes your project original?
 
 **Response:**  
-`[The integration of physical controls (buttons/sensors) with a digital pixel with the illusion carried by the mirror , game creates a hybrid interaction, unlike typical screen-only games.]`
+`[Most physical game controllers are generic. Here, the NeoPixel on the controller is wired directly into the game's action logic — it breathes white at rest, turns cyan on a dash, green on fire, red on ESC — so the controller itself narrates the game state. Combined with the one-way mirror installation, this creates a hybrid physical-digital experience that a phone or standard gamepad cannot replicate.]`
 
 ---
 
@@ -148,7 +148,7 @@ Examples:
 - move object → sensor detects → sound/light response → player reacts
 
 **Response:**  
-`[press → jump/dodge → avoid obstacle → score increases → repeat]`
+`[move joystick → ESP32 reads ADC → BLE keyboard report sent → game character responds → NeoPixel colour changes → player reacts → repeat]`
 
 ## 4.2 Intended Player / Audience
 
@@ -164,10 +164,10 @@ Examples:
 ## 4.3 Player Journey
 Describe exactly how a player will use the project.
 
-1. **Approach:** `[Sees screen + controls]`
-2. **Start:** `[Press button]`
-3. **First Action:** `[Batman starts moving]`
-4. **Main Interaction:** `[What keeps happening during use?]`
+1. **Approach:** `[Player walks up to what appears to be a normal mirror in a dark frame.]`
+2. **Start:** `[Light sensor detects presence; game activates and becomes visible through the one-way mirror. Player picks up the ESP32 console]`
+3. **First Action:** `[Batman begins moving automatically. Player pushes the left joystick to steer, NeoPixel turns yellow (W/S) or orange (A/D) instantly.]`
+4. **Main Interaction:** `[Player steers Batman with the left stick (WASD), uses the right stick to flip direction (H/L), dash downward (J), and fires with the right button (F). The NeoPixel cycles through cyan, green, purple, orange in direct response.]`
 5. **System Response:** `[How does the project respond?]`
 6. **Win / Lose / End Condition:** `[How does one round end?]`
 7. **Reset:** `[How does the next round begin?]`
