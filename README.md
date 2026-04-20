@@ -58,7 +58,7 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `Ashitha Ashok` | `[Coding / App]` | `[Electronics]` | `[Strong logic building, UI thinking, integration]` |
+| `Ashitha Ashok` | `[Coding / App]` | `[Mechanics]` | `[Strong logic building, UI thinking, integration]` |
 | `Varada Supanekar` | `[Electronics / Fabrication]` | `[Mechanics]` | `[Circuit design, physical prototyping]` |
 
 ## 1.3 Project Title
@@ -207,7 +207,6 @@ What is the smallest version of this project that still delivers the core experi
 ## 5.3 Stretch Features
 What features are nice to have but not essential?
 
-- `[One-way mirror installation frame with internal LED ambient lighting.]`
 - `[Light-sensor proximity trigger to auto-wake the game when a player approaches.]`
 - `[Score leaderboard displayed on the mirror frame after each round.]`
 
@@ -828,7 +827,7 @@ Insert a sketch or screenshot of the app interface.
 
 | Item | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
 |---|---:|---|---|---:|---|---|
-| `[ESP32]` | `1` | `Yes` | `No` | `0` | `[Spec]` | `[Reason]` |
+| `[ESP32]` | `1` | `Yes` | `Yes` | `5` | `[ESP32WROOM-Bluetooth/wifi]` | `[main system]` |
 | `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
 | `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
 
