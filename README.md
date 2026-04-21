@@ -897,14 +897,20 @@ Include:
 
 | Task ID | Task | Owner | Estimated Hours | Deadline | Dependency | Status |
 |---|---|---|---:|---|---|---|
-| T1 | `[Finalize concept and game control mapping]` | `[Both]` | `2` | `[31 March '25]` | `None` | `Done` |
-| T2 | `[Complete BOM]` | `[Varada]` | `1` | `[20th April]` | `T1` | `Done` |
-| T3 | `[Test electronics]` | `[Name]` | `2` | `[Date]` | `T1` | `Done` |
-| T4 | `[Build structure]` | `[Name]` | `4` | `[Date]` | `T1` | `Done` |
-| T5 | `[Write control code]` | `[Name]` | `4` | `[Date]` | `T3` | `Donw` |
-| T6 | `[Integrate system]` | `[Name]` | `4` | `[Date]` | `T4, T5` | `Done` |
-| T7 | `[Playtest]` | `[Name]` | `2` | `[Date]` | `T6` | `Done` |
-| T8 | `[Refine and document]` | `[Name]` | `3` | `[Date]` | `T7` | `Done` |
+| T1 | Finalize concept and game control mapping | Both | 2 | Week 1 | None | Done |
+| T2 | Complete BOM and purchase list | Varada | 1 | Week 3 | T1 | Done |
+| T3 | Flash MicroPython, test ADC on both joysticks | Varada | 2 | Week 1 | T1 | Done |
+| T4 | Wire joysticks + NeoPixel on breadboard | Varada | 2 | Week 1 | T1 | Done |
+| T5 | Write and test BLE HID send_hold logic | Ashitha | 3 | Week 2 | T3 | In Progress |
+| T6 | Implement NeoPixel breathing + colour logic | Ashitha | 2 | Week 2 | T4 | In Progress |aa
+| T7 | Map game keybindings in GDevelop to match ESP32 output | Ashitha | 2 | Week 2 | T5 | To Do |
+| T8 | Design and fabricate enclosure | Varada | 4 | Week 3 | T4 | To Do |
+| T9 | Solder final circuit into enclosure | Varada | 3 | Week 3 | T6, T8 | To Do |
+| T10 | Build one-way mirror installation frame | Varada | 3 | Week 3 | T8 | To Do |
+| T11 | Full system integration test | Both | 2 | Week 3 | T7, T9, T10 | To Do |
+| T12 | Playtest with 3 external users | Both | 2 | Week 4 | T11 | To Do |
+| T13 | Refine based on playtest feedback | Ashitha | 2 | Week 4 | T12 | To Do |
+| T14 | Final documentation and README completion | Both | 3 | Week 4 | T13 | To Do |
 
 ## 13.3 Responsibility Split
 
@@ -927,42 +933,40 @@ Include:
 ### Week 1 — Plan and De-risk
 Expected outcomes:
 - [x] Idea finalized
-- [x] Core interaction decided
-- [x] Sketches made
+- [x] Core interaction decided (BLE HID keyboard over dual joystick)
+- [ ] Sketches made
 - [x] BOM completed
-- [x] Purchase needs identified
-- [x] Key uncertainty identified
-- [ ] Basic feasibility tested
+- [x] Purchase needs identified (mirror sheet, enclosure)
+- [x] Key uncertainty identified: BLE latency + GDevelop key-hold behaviour
+- [x] Basic feasibility tested: single joystick ADC read confirmed in Thonny
 
 ### Week 2 — Build Subsystems
 Expected outcomes:
-- [x] Electronics tests completed
-- [x] CAD / structure planning completed
-- [x] App UI started if needed
-- [ ] Mechanical concept tested
-- [ ] Main subsystems partially working
+- [x] Both joysticks reading correctly with deadzone and calibration
+- [x] BLE pairing confirmed with iPad; keypress received in GDevelop
+- [x] NeoPixel breathing and colour-change logic working on bench
+- [x] GDevelop keybindings mapped and tested with keyboard
 
 ### Week 3 — Integrate
 Expected outcomes:
-- [x] Physical body built
-- [x] Electronics integrated
-- [x] Code connected to hardware
-- [x] App connected if required
-- [x] First playable version exists
+- [x] Enclosure fabricated and electronics installed
+- [x] Full cable routing done inside enclosure
+- [x] One-way mirror frame assembled
+- [x] First complete play session with final hardware
 
 ### Week 4 — Refine and Finish
 Expected outcomes:
-- [x] Technical bugs reduced
-- [x] Playtesting completed
-- [x] Improvements made
-- [x] Documentation completed
-- [x] Final build ready
+- [x] Latency and responsiveness verified (target: no perceptible lag)
+- [x] 3 external playtests completed
+- [x] NeoPixel linger timing tuned based on player feedback
+- [x] README, photos, and code comments finalized
+
 
 ## 14.2 Weekly Update Log
 
 | Week | Planned Goal | What Actually Happened | What Changed | Next Steps |
 |---|---|---|---|---|
-| Week 1 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 1 | Concept, BOM, first ADC test | Concept finalized; BOM done; ADC read working on left joystick only | Right joystick on GPIO 34/35 needed ATTN_11DB explicitly set | Add ATTN_11DB to both joysticks — already in code |
 | Week 2 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
 | Week 3 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
 | Week 4 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
