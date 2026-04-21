@@ -58,11 +58,11 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `Ashitha Ashok` | `[Coding / App]` | `[Mechanics]` | `[Strong logic building, UI thinking, integration]` |
-| `Varada Supanekar` | `[Electronics / Fabrication]` | `[Mechanics]` | `[Circuit design, physical prototyping]` |
+| `Ashitha Ashok` | `[Coding / App]` | `[Front End Development]` | `[Strong logic building, UI thinking, integration]` |
+| `Varada Supanekar` | `[Electronics / Fabrication]` | `[Circuit Protoyping]` | `[Circuit design, physical prototyping]` |
 
 ## 1.3 Project Title
-`[Batman Dodge]`
+`[Batmanor]`
 
 ## 1.4 One-Line Pitch
 `A fast-paced pixel-art Batman game controlled by a hand-built ESP32 dual-joystick console that transmits inputs wirelessly over BLE and lights up a NeoPixel in real time to mirror every in-game action.`
@@ -75,7 +75,7 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`The project is a 2D pixel-art game (BATMANNER) where Batman navigates a city landscape, dodging obstacles and enemies. All player input comes from a custom physical console built around an ESP32 microcontroller with two HW-504 analogue joysticks. The console pairs to the game host over Bluetooth Low Energy, appearing as a standard HID keyboard so no special drivers are needed.
+`The project is a 2D pixel-art game (BATMANNER) where Batman navigates a manor, dodging obstacles and enemies. All player input comes from a custom physical console built around an ESP32 microcontroller with two HW-504 analogue joysticks. The console pairs to the game host over Bluetooth Low Energy, appearing as a standard HID keyboard so no special drivers are needed.
 The experience combines embodied physical control with reactive lighting feedback. A single WS2812B NeoPixel breathes continuously and changes colour in real time based on which action is being performed — yellow for movement, orange for strafing, cyan for dash, green for fire, red for pause — creating an immediate sensory link between what the player does physically and what happens on screen. This makes the console feel alive, not just functional.`
 
 ---
@@ -112,7 +112,7 @@ Complete the sentence below:
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
 
 **Response:**  
-`[We are designing this project as if we are a small creative studio making a game / interactive experience for teens and exhibition visitors.]`
+`[We are designing this project as if we are a small creative studio making a game / interactive experience for teens and exhibition visitors. It is supposed to evoke a sense of nostalgia and 90s arcade games for young adults and millennials]`
 
 ---
 
@@ -159,7 +159,7 @@ Examples:
 | Solo or multiplayer | `[Solo]` |
 | Expected duration of one round | `[30–60 seconds per round]` |
 | What should the player feel? | `[Tension and excitement]` |
-| Is explanation required before use? | `[Minimal]` |
+| Is explanation required before use? | `[Minimal- getting acquanited to the console directions]` |
 
 ## 4.3 Player Journey
 Describe exactly how a player will use the project.
@@ -282,9 +282,9 @@ Add a sketch with labels showing:
 
 | Dimension | Value |
 |---|---|
-| Length | `[~160 mm]` |
-| Width | `[~90 mm]` |
-| Height | `[~35 mm (enclosure with joystick caps)]` |
+| Length | `[~180 mm]` |
+| Width | `[~110 mm]` |
+| Height | `[~50 mm (enclosure with joystick caps)]` |
 | Estimated weight | `[~180 g (with enclosure)]` |
 
 ---
@@ -844,6 +844,7 @@ Insert a sketch or screenshot of the app interface.
 |`Push Buttons` | `6` | `Yes` | `Yes` |  36 Rupees | `[TC 15 12*12*7 mm ]` | `[More Buttons to add actions to the console]` |
 |'Micro-USB cable' | '1' | 'Yes' | Yes | 120 Rupees | USB-A to Micro-B | Power + MicroPython flashing via Thonny |`
 | 'One-way acrylic mirror sheet' | 1 | No | Yes | ₹1250 | 9 by 12 inches, 3 mm | Mirror installation for game display illusion |
+|`Neopixelstrip` | `1` | `no` | `Yes` |  275 Rupees | `[2m neopixel strip ]` | `[Reaction based element]
 
 ## 12.2 Material Justification
 Explain why you selected your main materials and components.
@@ -865,19 +866,21 @@ Examples:
 
 | Item | Why Needed | Purchase Link | Latest Safe Date to Procure | Status |
 |---|---|---|---|---|
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
+| `[ESP 32]` | `[Original one was fried]` | `[Ordered from a local shop]` | `[11 April]` | `[Reecieved]` |
+| `[Neopixels strips]` | `[the kit didnt have strips]` | `[shop]` | `[17 April]` | `[ Received]` |
+| `[Joystick controller]` | `[to make the console]` | `[shop]` | `[17 April]` | `[ Received]` |
+| `[Buck Converter]` | `[preventing voltage issues]` | `[shop]` | `[17 April]` | `[ Received]` |
 
 ## 12.4 Budget Summary
 
 | Budget Item | Estimated Cost |
 |---|---:|
-| Electronics | `[Cost]` |
-| Mechanical parts | `[Cost]` |
-| Fabrication materials | `[Cost]` |
-| Purchased extras | `[Cost]` |
-| Contingency | `[Cost]` |
-| **Total** | `[Cost]` |
+| Electronics Joysticks/Breadboard/Battery 3.3v| `[750]` |
+| Mechanical parts | `[-]` |
+| Fabrication materials - Mirror | `[1250]` |
+| Purchased extras - Jumper Wires/Buck Converter| `[200]` |
+| Contingency - 4ESPS | `[1600]` |
+| **Total** | `[3800]` |
 
 ## 12.5 Budget Reflection
 If your cost is too high, what can be simplified, removed, substituted, or shared?
@@ -925,13 +928,13 @@ Include:
 
 | Area | Main Owner | Support Owner |
 |---|---|---|
-| Concept and gameplay | `[Name]` | `[Name]` |
-| Electronics | `[Name]` | `[Name]` |
-| Coding | `[Name]` | `[Name]` |
-| App | `[Name]` | `[Name]` |
-| Mechanical build | `[Name]` | `[Name]` |
-| Testing | `[Name]` | `[Name]` |
-| Documentation | `[Name]` | `[Name]` |
+| Concept and gameplay | `[Ashitha]` | `[Varada]` |
+| Electronics | `[Varada]` | `[Ashitha]` |
+| Coding | `[Varada]` | `[Ashitha]` |
+| App | `[Ashitha]` | `[Varada]` |
+| Physical build | `[Varada]` | `[Ashitha]` |
+| Testing | `[Ashitha]` | `[Varada]` |
+| Documentation | `[Varada]` | `[Ashitha]` |
 
 ---
 
@@ -1036,15 +1039,20 @@ What is the single biggest uncertainty in your project at this stage?
 
 | Date | Problem Found | Type | What You Tried | Result | Next Action |
 |---|---|---|---|---|---|
-| `[Date]` | `[Describe issue]` | `[Technical / Mechanical / UI / Gameplay]` | `[What you did]` | `[Worked / Partly / Failed]` | `[Next step]` |
-| `[Date]` | `[Describe issue]` | `[Type]` | `[What you did]` | `[Result]` | `[Next step]` |
+| Week 1, Day 2 | GPIO 34/35 returning 0 constantly | Technical | Checked wiring, then added `ADC.ATTN_11DB` to adc_x and adc_y on joystick 2 | Worked — values now read 0–4095 correctly | Already fixed in final code |
+| Week 2, Day 1 | BLE keyboard paired but Batman not moving in GDevelop | Technical | Checked serial log — keys were sending correctly. Opened GDevelop event editor — controls used key-pressed (fires once) instead of key-held (fires every frame) | Fixed — swapped all movement events to key-held in GDevelop | No further action needed |
+| Week 2, Day 2 | NeoPixel flickering white when fire button held | Technical | Suspected power noise; added 100µF cap across NeoPixel VCC/GND | Flicker stopped entirely | Capacitor included in final build |
+| Week 3, Day 1 | Joystick module collar too wide for first MDF cut | Mechanical | Re-measured joystick module: collar diameter 24mm not 22mm as assumed. Re-cut holes on laser cutter with 24.5mm diameter | Modules fit cleanly with slight friction hold — no glue needed | Done |
+| Week 3, Day 2 | BLE dropout when console moved beyond ~2.5m from iPad | Technical | Tested at 1m, 1.5m, 2m, 3m — stable up to 2m, occasional dropout at 2.5m+ | Acceptable — installation keeps player within 1m of screen | Set recommended play distance to ≤1.5m |
+| Week 4, Day 1 | Players reporting diagonal movement felt delayed | Gameplay | Reduced deadzone from 600 to 500 ADC counts in config | Movement felt noticeably more responsive in next playtest | Done — updated in code |
 
 ## 16.4 Playtesting Notes
 
 | Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
 |---|---|---|---|---|
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
+| Classmate (Advaith) | Picked up controller, tried left stick first, figured out movement within 20 seconds without instruction | Did not notice right stick at first — assumed it was decorative | The NeoPixel turning red when she pressed ESC — said it felt like the controller "knew" she paused | Added a small printed label: LEFT = MOVE, RIGHT = FLIP/DASH/FIRE |
+| Classmate (Anish) | Immediately tried both sticks, discovered dash (J) by accident, kept using it | Initially pushed right stick up expecting a jump — J is only triggered by pushing down | The fast colour transitions on the NeoPixel, especially cyan on dash | Added a note to instructions: right stick down = dash, no upward action |
+| Fellow (Rajasi) | Played cautiously, mostly used left stick only, survived longer than other players | Thought the game was only controlled by the left stick — never attempted right stick actions | The mirror effect revealing the game — said the transition was "striking" | Mirror reveal moment should be made slower/more dramatic if possible in a future version |
 
 ---
 
@@ -1063,7 +1071,32 @@ Include:
 - revisions.
 
 **Response:**  
-`[Write here]`
+`[The controller enclosure was designed in Adobe Illutrator and Rhino and cut from 3mm MDF on a laser cutter. 
+The top face has two 24.5mm circular holes for the joystick module collars and one 8mm hole 
+for the NeoPixel lens. The sides were cut with finger-joint edges and assembled using PVA wood 
+glue. A removable bottom panel is held with two M3 screws for electronics access.
+
+The ESP32 DevKit is mounted inside on a small piece of foam to prevent shorts against the MDF. 
+Joystick modules are friction-fitted into their holes — the collar provides enough grip without 
+adhesive, which keeps them replaceable. Wiring was routed along the inner walls using small 
+cable clips cut from excess MDF strips.
+
+The NeoPixel is glued behind its hole with the lens flush to the surface, and a short piece of 
+heat-shrink tubing was used as a light diffuser sleeve to soften the point source into an even glow.
+
+All wiring was initially done with  jumper wires on a breadboard for testing. Once confirmed 
+working, the circuit was transferred to a small piece of perfboard and soldered. The NeoPixel 
+data line includes a 330Ω resistor and the VCC rail has a 100µF capacitor soldered directly at 
+the LED pads.
+
+The one-way mirror frame was built from 18mm pine timber offcuts, mitred at the corners and 
+glued. The acrylic mirror sheet is held in a rebate routed into the inner face of the frame. 
+The iPad sits in a custom MDF cradle behind the frame, angled slightly upward so the reflection 
+aligns with the player's eye level at standing height.
+
+Revision: The first enclosure had the joystick holes centred at 40mm from each end — this felt 
+too cramped for two-thumb operation. The second version moved them to 50mm from each end 
+(100mm centre-to-centre), which was comfortable for all three playtesters.]`
 
 ## 17.2 Build Photos
 Add photos throughout the project.
@@ -1087,9 +1120,16 @@ Example:
 
 | Version | Date | What Changed | Why |
 |---|---|---|---|
-| `v1` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v2` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v3` | `[Date]` | `[Describe]` | `[Reason]` |
+## 17.3 Version History
+
+| Version | Date | What Changed | Why |
+|---|---|---|---|
+| v0.1 | Week 1 | Single joystick ADC test | Verify GPIO 32/33 read correctly |
+| v0.2 | Week 1 | Added second joystick and NeoPixel | Full hardware bench test |
+| v0.3 | Week 2 | BLE send_hold implemented and tested | Core control loop functional |
+| v1.0 | Week 3 | Integrated into enclosure; mirror frame built | Full physical build with console structure inetrations and frame dimensions based on mirror size |
+| v1.1 | Week 4 | Linger timing and deadzone tuned after playtesting, aletr neopixel reaction time | Responsiveness improvements |
+
 
 ---
 
@@ -1099,23 +1139,25 @@ Example:
 Describe the final version of your project.
 
 **Response:**  
-`[Write here]`
+`[The final version of our project evolved into an interactive mirror-cum-screen gaming interface. At first, it functions as a regular mirror, but as the user approaches, it transforms into a digital display hosting an arcade-style game. The gameplay is inspired by a character similar to Batman navigating through a maze-like environment filled with hostile ghost entities. The player uses dual joysticks—one for movement and the other for combat actions like aiming and shooting. The game involves defending against ghosts that attack and poison the player, creating a fast-paced and engaging experience.
+
+To enhance immersion, NeoPixel LED strips are integrated around the mirror, reacting dynamically to player inputs. Each movement or action triggers specific lighting responses, creating a strong connection between physical interaction and visual feedback. The project combines physical controls, digital gameplay, and responsive lighting to create a unique, nostalgic arcade experience.]`
 
 ## 18.2 What Works Well
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- The system is highly responsive, with immediate feedback to joystick inputs.
+- The concept is nostalgic and encourages collaborative and interactive engagement.
+- The nostalgic arcade-style gameplay and joystick controls make it intuitive and enjoyable for users.
 
 ## 18.3 What Still Needs Improvement
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- The game can be expanded into multiple levels with increasing complexity.
+- The current gameplay environment is minimal and can be made more detailed and immersive.
+- Additional features like varied enemies, power-ups, and sound design could enhance the experience further.
 
 ## 18.4 What Changed From the Original Plan
 How did the project change from the initial idea?
 
 **Response:**  
-`[Write here]`
+`[Initially, the project included an ultrasonic sensor to detect user presence and automatically trigger the game. However, due to repeated ESP32 failures and power limitations, this feature was removed. The system was simplified to run on a single ESP32, which required reducing the number of components and focusing on core gameplay and interaction instead.]`
 
 ---
 
@@ -1127,7 +1169,18 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
-`[Write here]`
+`[We divided the work cleanly from the start — Ashitha owned all firmware and game logic, 
+Varada owned fabrication and circuit assembly — and that split held throughout without 
+friction. We were both productive in our own lanes.
+
+What slowed us down most was the GDevelop key-held discovery in Week 2. We had assumed 
+the game engine would handle a continuously held BLE key naturally, but it needed explicit 
+key-held events instead of key-pressed. Debugging that cost most of one class session.
+
+Time management was solid in Weeks 1–3 but tighter in Week 4 because playtesting feedback 
+led to more enclosure changes than expected (joystick labels, hole resizing). We would 
+build an earlier cardboard mock-up next time to catch physical ergonomic issues before 
+committing to the laser cutter.]`
 
 ## 19.2 Technical Reflection
 What did you learn about:
@@ -1138,7 +1191,24 @@ What did you learn about:
 - integration?
 
 **Response:**  
-`[Write here]`
+`[Electronics- We learned that the ESP32's GPIO 34 and 35 are input-only — they have no 
+internal pull-up resistors, which is not obvious from the pinout diagram. ADC attenuation 
+must be set explicitly to ATTN_11DB for full 0–4095 range on 3.3V. NeoPixel power spikes 
+are real and the 100µF capacitor is not optional.
+
+Coding: MicroPython's `struct.pack` approach for BLE HID reports was more reliable than 
+higher-level abstractions. Holding keys down by re-sending the same HID report every loop 
+(rather than using key-release events) gave smooth, lag-free control. The triangle-wave 
+breathing function was simple to write but produced a far more satisfying visual result 
+than a simple on/off blink.
+
+Fabrication: Laser-cut MDF is fast but measurements need to account for the kerf 
+(~0.2mm) and for real component tolerances — datasheets list nominal dimensions, not 
+the actual collar size of a specific batch of HW-504 modules.
+
+Integration: The cleanest decision we made was treating the ESP32 as a plain BLE 
+keyboard. It meant zero custom code on the iPad side — GDevelop, iPadOS, and the game 
+all worked with it out of the box.]`
 
 ## 19.3 Design Reflection
 What did you learn about:
@@ -1150,7 +1220,22 @@ What did you learn about:
 - iteration?
 
 **Response:**  
-`[Write here]`
+`[Designing for play: The single most important lesson was that physical controls need 
+to feel correct before the game feels fun. When the deadzone was at 600, players felt 
+the game was ignoring them. Dropping it to 500 made the experience feel responsive and 
+respectful of player intent.
+
+Delight: The NeoPixel was originally planned as a secondary feature. After the first 
+playtest, it was clearly the thing players commented on most. A small, simple light doing 
+one job very visibly creates a disproportionate amount of delight.
+
+Clarity: Two out of three first-time players ignored the right joystick entirely. No 
+matter how logical a control scheme seems to the designer, players need physical or visual 
+cues. Printed labels resolved this immediately — we should have included them from day one.
+
+Iteration:The second enclosure was significantly better than the first. Building 
+something physical once, getting it wrong, and fixing it is faster and more informative 
+than trying to perfect it in CAD.]`
 
 ## 19.4 If You Had One More Week
 What would you improve next?
@@ -1163,7 +1248,7 @@ What would you improve next?
 # 20. Final Submission Checklist
 
 Before submission, confirm that:
-- [ ] Team details are complete
+- [x] Team details are complete
 - [ ] Project description is complete
 - [ ] Inspiration sources are included
 - [ ] Player journey is written
