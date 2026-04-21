@@ -1,4 +1,4 @@
-# Open Design and Technology  
+<img width="1262" height="686" alt="WhatsApp Image 2026-04-21 at 7 54 00 PM" src="https://github.com/user-attachments/assets/e18512e2-02e9-40a4-a344-6b06e93d5641" /># Open Design and Technology  
 ## Final Project README
 
 > **Project Weight:** 70%  
@@ -791,7 +791,7 @@ main()]
 
 If yes, complete this section.
 
-## 11.2 Why is the app needed?
+## 11.2 Why is the game needed?
 Explain what the app adds to the experience.
 
 Examples:
@@ -803,15 +803,33 @@ Examples:
 - displaying data.
 
 **Response:**  
-`[Write here]`
+`[The GDevelop game (BATMANNER) is the core output layer of the entire system — without it,
+the ESP32 console is just a BLE keyboard. The game is what gives every physical input
+meaning. It translates joystick deflections into visible on-screen consequences (Batman
+moving, dodging, attacking), tracks lives and score across the session, and escalates
+difficulty so the experience stays challenging beyond the first round.
 
-## 11.3 App Features
+The game also drives the NeoPixel indirectly — the action being performed in-game
+determines which keycode is active on the ESP32, which determines the LED colour. So the
+game, the controller, and the light are all one connected feedback loop. Without the game
+running, there is no loop]`
+
+## 11.3 game Features
 
 | Feature | Purpose |
 |---|---|
-| `[Bluetooth connect button]` | `[Purpose]` |
-| `[Score display]` | `[Purpose]` |
-| `[Control button / slider / label]` | `[Purpose]` |
+| `[Bluetooth connect button]` | `[Displays Batman, obstacles, enemies, and backgrounds at playable
+  frame rate on the iPad.]` |
+| `[Score display]` | `[Tracks 4 lives; reduces on collision; triggers game-over screen on zero.]` |
+| `[Difficulty progression]` | `[Obstacle speed and spawn rate increase with each level,
+  extending replayability beyond the first session.]` |
+  | `[Input processing]` | `[Receives BLE keyboard events from the ESP32 and maps them to
+  in-game actions using key-held events (not key-pressed) so movement is smooth and
+  continuous rather than single-frame.]` |
+   | `[Game state management]` | `[Handles idle, playing, paused (ESC), and game-over states,
+  each with their own screen visible through the one-way mirror.]` |
+  
+
 
 ## 11.4 UI Mockup
 Insert a sketch or screenshot of the app interface.
@@ -826,10 +844,11 @@ Insert a sketch or screenshot of the app interface.
 
 ## 11.5 App Screen Flow
 
-1. `[Step 1]`
-2. `[Step 2]`
-3. `[Step 3]`
-4. `[Step 4]`
+1. `[**Idle / Mirror State** — Game launches silently on iPad behind the mirror. Screen is dark, mirror appears normal. Light sensor detects player presence and wakes the display.]`
+2. `[**Title / Start Screen** — Batman logo and "Press any button to start" prompt appears through the mirror. Player presses either joystick button on the ESP32 console to begin.]`
+3. `[**Active Game Screen** — Main gameplay view: Batman character, scrolling city background, obstacles, enemies, score counter, and lives indicator all visible. NeoPixel on controller reflects current action in colour.]`
+4. `[**Pause Screen** — Triggered by ESC (left joystick click). Game freezes, a pause overlay appears through the mirror. NeoPixel holds red. Press ESC again to resume.]`
+5. `[**Game Over Screen** — Displayed when all 4 lives are lost. Shows final score. After 3 seconds, prompts player to press any button to restart and return to the Title Screen.]`
 
 ---
 
@@ -873,6 +892,9 @@ Examples:
 | `[Neopixels strips]` | `[the kit didnt have strips]` | `[shop]` | `[17 April]` | `[ Received]` |
 | `[Joystick controller]` | `[to make the console]` | `[shop]` | `[17 April]` | `[ Received]` |
 | `[Buck Converter]` | `[preventing voltage issues]` | `[shop]` | `[17 April]` | `[ Received]` |
+
+https://acrobat.adobe.com/id/urn:aaid:sc:AP:3603ca69-589a-46da-a0c5-ed7aaacf9a94
+
 
 ## 12.4 Budget Summary
 
