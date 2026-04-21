@@ -392,7 +392,11 @@ Note: GPIO 34 and 35 are input-only on the ESP32 — do not try to use them as o
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
-`[Upload image and link here]`
+[<img width="1600" height="1582" alt="image" src="https://github.com/user-attachments/assets/3418bc60-d3db-434a-b8fa-62679e4e5af4" />]
+<img width="1075" height="1600" alt="image" src="https://github.com/user-attachments/assets/623bbe00-33d0-412d-b18d-f1c241ff1609" />
+
+
+
 
 ## 9.4 Power Plan
 
@@ -810,7 +814,12 @@ Examples:
 Insert a sketch or screenshot of the app interface.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img width="1462" height="787" alt="1" src="https://github.com/user-attachments/assets/e1515931-6aed-4767-af17-93b7cfa5e64c" />
+<img width="1466" height="768" alt="3" src="https://github.com/user-attachments/assets/9ee9cc52-e363-46fd-bff9-30557a8a76e6" />
+<img width="1449" height="807" alt="4" src="https://github.com/user-attachments/assets/1e4e3320-b929-4c3f-8ae4-f3437aab85d2" />
+
+
+
 
 ## 11.5 App Screen Flow
 
